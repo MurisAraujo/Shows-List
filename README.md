@@ -2,7 +2,7 @@
 
 ### Installation
 
-Para executar este projeto basta abrir um terminal em ambas as pastas frontend e backend e executar o comando npm install nas duas, feito isso execute o comando npm start no backend e dps npm start no frontend.
+Para executar este projeto basta abrir um terminal em ambas as pastas frontend e backend e executar o comando npm install nas duas, feito isso execute o comando npm start no backend e depois no frontend.
 
 ### Tecnology
 
