@@ -18,6 +18,7 @@ module.exports = {
       synopsis,
       category,
       state,
+      image
     } = request.body;
     try {
       await connection("shows").insert({
@@ -27,11 +28,12 @@ module.exports = {
         synopsis,
         category,
         state,
+        image
       });
     } catch (error) {
       return response.status(400).json({ message: error });
     }
-    return response.status(200).json({ message: "Show successfully added" });
+    return response.status(200).json({ message: "Show successfully added", data: request.body});
   },
   
   async delete(request, response){
@@ -42,10 +44,11 @@ module.exports = {
     } catch (error) {
       return response.status(400).json({ message: error });
     }
-    return response.status(204);
+    return response.status(200).json({message: "Show successfully deleted"});
   },
 
   async update(request, response){
+
     const {id} = request.params;
 
     const {
@@ -55,6 +58,7 @@ module.exports = {
       synopsis,
       category,
       state,
+      image
     } = request.body;
 
     try {
@@ -64,7 +68,8 @@ module.exports = {
         seasons: seasons,
         synopsis: synopsis,
         category: category,
-        state: state
+        state: state,
+        image: image
       });
     } catch (error) {
       return response.status(400).json({ error });
