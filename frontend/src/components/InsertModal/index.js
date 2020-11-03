@@ -26,7 +26,23 @@ function InsertModal() {
     });
     dispatch(updateContent());
     dispatch(closeCreateModal());
+    document.querySelector("#createShowName").value = '';
+    document.querySelector("#createShowYear").value = '';
+    document.querySelector("#createShowSeason").value = '';
+    document.querySelector("#createShowSynopsis").value = '';
+    document.querySelector("#createShowCategory").value = '';
+    document.querySelector("#createShowImage").value = '';
   };
+
+  const closeModal = () => {
+    document.querySelector("#createShowName").value = '';
+    document.querySelector("#createShowYear").value = '';
+    document.querySelector("#createShowSeason").value = '';
+    document.querySelector("#createShowSynopsis").value = '';
+    document.querySelector("#createShowCategory").value = '';
+    document.querySelector("#createShowImage").value = '';
+    dispatch(closeCreateModal());
+  }
 
   return (
     <Container state={createModal}>
@@ -72,7 +88,7 @@ function InsertModal() {
             <button
               onClick={(e) => {
                 e.preventDefault();
-                dispatch(closeCreateModal())
+                closeModal();
               }}
               className="cancel"
             >

@@ -4,8 +4,8 @@ import { darken } from "polished";
 export const Container = styled.div`
   position: absolute;
   z-index: 2;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   visibility: ${(props) => (props.state === true ? "visible" : "hidden")};
@@ -58,6 +58,24 @@ export const Modal = styled.div`
       font-size: 19px;
     }
   }
+  
+  @media(max-height: 1000px){
+    height: 95%;
+  }
+
+  @media (max-width: 1100px) {
+    width: 45%;
+    
+  }
+  @media (max-width: 900px) {
+    width: 65%;
+    
+  }
+  @media (max-width: 650px) {
+    width: 80%;
+    
+  }
+
 `;
 
 export const Input = styled.input`

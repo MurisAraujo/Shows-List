@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body{
     background-color: #282828;
+    height: 100vh;
   }
 
   a {

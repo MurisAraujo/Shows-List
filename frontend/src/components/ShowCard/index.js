@@ -30,7 +30,7 @@ function ShowCard({ show }) {
 
   return (
     <Container>
-      <button onClick={() => deleteShow()} id="delete"> Excluir </button>
+      
       <CardHead>
         <h1>
           {show.name}
@@ -46,6 +46,7 @@ function ShowCard({ show }) {
         </p>
       </CardBody>
       <CardFooter state={show.state}>
+        <button onClick={() => deleteShow()} id="delete"> Excluir </button>
         <button className="edit" onClick={() => openEditModal()}>
           Editar
         </button>
